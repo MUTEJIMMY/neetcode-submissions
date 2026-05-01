@@ -1,0 +1,16 @@
+class Solution {
+    public String longestCommonPrefix(String[] strs) {
+        HashMap<String,Integer> hm = new HashMap<>();
+        for(int i = 0; i < strs.length; i++){
+            String string = strs[0];
+            for(int j = 0; j< string.length; j++){
+                if(!hm.containsKey(string[j])){
+                    hm.put(string[j],1);
+                }else{
+                    x = hm.get(string[j]);
+                    hm.put(string[j], x+1);
+                }
+            }
+        }
+    }
+}
